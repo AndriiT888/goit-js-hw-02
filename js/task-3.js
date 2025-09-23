@@ -1,12 +1,8 @@
 function checkForSpam(message) {
     const spamWord1 = message.toLowerCase().includes(`spam`);
     const spamWord2 = message.toLowerCase().includes(`sale`);
-    if (spamWord1 || spamWord2) {
-        return "Warning: This message contains forbidden words.";
-    } else {
-        return "You can safely open this message.";
-    }
-}
+    return spamWord1 || spamWord2;
+   }
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
